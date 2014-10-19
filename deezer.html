@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+</head>
+
+<body>
+    <div id='dz-root'></div>
+	<input type="button" value="Play" onClick="DZ.player.playAlbum(6125830);" />
+	<script>
+		DZ.init({
+			appId  : '122865',
+			channelUrl : 'http://external.codecademy.com/channel.html',
+			player: {
+		        onload: function () {}
+            }
+		});
+	</script>
+	
+	
+	You can query the API using HTTP REST requests, but it’s much easier to use the method included in the Javascript SDK : DZ.api.
+
+Using the DZ.api method is very simple :
+
+ the first argument is your query url, with a relative path. For example, if you want to search for an artist, you’ll make a GET request against http://api.deezer.com/2.0/search?q=eminem, which becomes DZ.api(‘/search ?q=eminem’, ..) ;
+ the second argument is your callback function, called with the results of your request.
+For starters, you’ll make a request to search for your favorite artist.
+
+If you want to explore all contents available in the Deezer API, you can use our API Explorer tool.
+	
+	
+</body>
+</html>
